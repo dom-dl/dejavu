@@ -42,6 +42,13 @@ class FileRecognizer(BaseRecognizer):
         return self.recognize_file(filename)
 
 
+class RawRecognizer(BaseRecognizer):
+    def __init__(self, dejavu):
+        super(RawRecognizer, self).__init__(dejavu)
+    
+    def recognize(self, rawinfo):
+        return self._recognize(*rawinfo)
+
 class MicrophoneRecognizer(BaseRecognizer):
     default_chunksize   = 8192
     default_format      = pyaudio.paInt16
