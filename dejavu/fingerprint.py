@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.mlab as mlab
+mlab.use('Agg')
 import matplotlib.pyplot as plt
 from scipy.ndimage.filters import maximum_filter
 from scipy.ndimage.morphology import (generate_binary_structure,
